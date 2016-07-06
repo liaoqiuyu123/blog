@@ -1,0 +1,1 @@
+<?php exit;//a:1:{i:0;a:3:{s:4:"link";s:12:"Github源码";s:3:"url";s:33:"https://github.com/join/customize";s:3:"des";s:33:"这个小博客的源码位置。";}}
