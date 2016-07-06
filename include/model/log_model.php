@@ -86,6 +86,7 @@ class Log_Model {
 		if ($row) {
 			$row['date'] = $row['date'] + $timezone * 3600;
 			$row['title'] = htmlspecialchars($row['title']);
+			$row['thumbUrl'] = $row['thumbUrl'];
 			$row['content'] = htmlspecialchars($row['content']);
 			$row['excerpt'] = htmlspecialchars($row['excerpt']);
 			$row['password'] = htmlspecialchars($row['password']);
@@ -178,6 +179,7 @@ class Log_Model {
 		while ($row = $this->db->fetch_array($res)) {
 			$row['date'] += $timezone * 3600;
 			$row['log_title'] = htmlspecialchars(trim($row['title']));
+			$row['log_thumbUrl'] = $row['thumbUrl'];
 			$row['log_url'] = Url::log($row['gid']);
 			$row['logid'] = $row['gid'];
 			$cookiePassword = isset($_COOKIE['em_logpwd_' . $row['gid']]) ? addslashes(trim($_COOKIE['em_logpwd_' . $row['gid']])) : '';

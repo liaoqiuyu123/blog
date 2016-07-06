@@ -31,11 +31,11 @@ require_once View::getView('module');
 <![endif]-->
 <?php doAction('index_head'); ?>
 </head>
-<body>
-<div id="wrap" class="container">
+<body style="background: url(/blog/content/templates/default/images/banner.jpg)">
+<div id="wrap" class="container" >
   <div id="header">
 
-    <h1><a href="<?php echo BLOG_URL; ?>"><?php echo $blogname; ?></a></h1>
+    <h1 ><a href="<?php echo BLOG_URL; ?>"><?php echo $blogname; ?></a></h1>
     <h3><?php echo $bloginfo; ?></h3>
   </div>
   <?php if(Option::get('topimg')): ?>

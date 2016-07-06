@@ -171,6 +171,7 @@ function autosave(act){
 	    editorMap['excerpt'].sync();
 		var url = "save_log.php?action=autosave";
 		var title = $.trim($("#title").val());
+		var thumbUrl = $.trim($("#thumbUrl").val());
 		var alias = $.trim($("#alias").val());
 		var sort = $.trim($("#sort").val());
 		var postdate = $.trim($("#postdate").val());
@@ -191,6 +192,7 @@ function autosave(act){
 		var querystr = "content="+encodeURIComponent(content)
 					+"&excerpt="+encodeURIComponent(excerpt)
 					+"&title="+encodeURIComponent(title)
+			        +"&thumbUrl="+encodeURIComponent(thumbUrl)
 					+"&alias="+encodeURIComponent(alias)
 					+"&author="+author
 					+"&sort="+sort

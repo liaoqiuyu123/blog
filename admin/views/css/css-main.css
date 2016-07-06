@@ -841,7 +841,7 @@ textarea {
 #post{
     width: 866px;
 }
-#post #title {
+#post #title,#post #thumbUrl {
 	border-radius:3px 3px 3px 3px;
 	border-style:solid;
 	border-width:1px;
@@ -853,7 +853,7 @@ textarea {
 	width:837px;
 	margin:0px 0px 10px 0px;
 }
-#post #title_label {
+#post #title_label,#post #thumbUrl_label{
 	vertical-align:middle;
 	color:#BBBBBB;
 	font-size:14px;

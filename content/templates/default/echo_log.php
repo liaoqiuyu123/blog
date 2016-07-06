@@ -8,7 +8,7 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
 <div id="contentleft"class="col-xs-8">
 	<h2><?php topflg($top); ?><?php echo $log_title; ?></h2>
 	<p class="date"><?php echo gmdate('Y-n-j', $date); ?>  <?php blog_author($author); ?> <?php blog_sort($logid); ?> <?php editflg($logid,$author); ?></p>
-	<?php echo $log_content; ?>
+	<?php if(function_exists("JA_Page")) echo JA_Page($log_content, $logid); else echo $log_content; ?>
 	<p class="tag"><?php blog_tag($logid); ?></p>
 	<?php doAction('log_related', $logData); ?>
 	<div class="nextlog"><?php neighbor_log($neighborLog); ?></div>

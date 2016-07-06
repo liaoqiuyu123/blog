@@ -11,6 +11,10 @@ $isdraft = $hide == 'y' ? true : false;
     <label for="title" id="title_label">输入文章标题</label>
     <input type="text" maxlength="200" name="title" id="title" value="<?php echo $title; ?>" />
 </div>
+    <div>
+        <label for="thumbUrl" id="thumbUrl_label">输入缩略图地址</label>
+        <input type="text" maxlength="200" name="thumbUrl" id="thumbUrl" value="<?php echo $thumbUrl; ?>"/>
+    </div>
 <div id="post_bar">
 	<div>
 	    <span onclick="displayToggle('FrameUpload', 0);autosave(1);" class="show_advset">上传插入</span>
@@ -105,9 +109,12 @@ $("#alias").keyup(function(){checkalias();});
 $("#advset").css('display', $.cookie('em_advset') ? $.cookie('em_advset') : '');
 $("#title").focus(function(){$("#title_label").hide();});
 $("#title").blur(function(){if($("#title").val() == '') {$("#title_label").show();}});
+$("#thumbUrl").focus(function(){$("#thumbUrl_label").hide();});
+$("#thumbUrl").blur(function(){if($("#thumbUrl").val() == '') {$("#thumbUrl_label").show();}});
 $("#tag").focus(function(){$("#tag_label").hide();});
 $("#tag").blur(function(){if($("#tag").val() == '') {$("#tag_label").show();}});
 if ($("#title").val() != '')$("#title_label").hide();
+if ($("#thumbUrl").val() != '')$("#thumbUrl_label").hide();
 if ($("#tag").val() != '')$("#tag_label").hide();
 setTimeout("autosave(0)",60000);
 <?php if ($isdraft) :?>

@@ -10,6 +10,7 @@ $Log_Model = new Log_Model();
 $Tag_Model = new Tag_Model();
 
 $title = isset($_POST['title']) ? addslashes(trim($_POST['title'])) : '';
+$thumbUrl = isset($_POST['thumbUrl']) ? trim($_POST['thumbUrl']) : '';
 $postDate = isset($_POST['postdate']) ? trim($_POST['postdate']) : '';
 $date = isset($_POST['date']) ? addslashes($_POST['date']) : '';//修改前的文章时间
 $sort = isset($_POST['sort']) ? intval($_POST['sort']) : '';
@@ -37,6 +38,7 @@ if (!empty($alias)) {
 
 $logData = array(
 	'title' => $title,
+	'thumbUrl' => $thumbUrl,
 	'alias' => $alias,
 	'content' => $content,
 	'excerpt' => $excerpt,
